@@ -1,0 +1,246 @@
+*,*::after, *::before { box-sizing: border-box; }
+
+body{
+    font-family: 'Archivo', sans-serif;
+}
+
+header nav ul li a{
+    color: #00386d;
+    font-family: 'Archivo', sans-serif;
+    font-weight:bold;
+    text-transform: uppercase;
+    
+}
+
+header nav ul li a:hover, header nav ul li a:focus{
+    color: #3db9b9;
+    border-bottom: #3db9b9 2px solid;
+    text-decoration: none;
+}
+header nav ul li{
+    list-style-type: none;
+    
+}
+
+header{
+    height: 80px;
+}
+
+#logo{
+    max-width: 300px;
+}
+
+.slick-slide,
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-dots{
+    bottom: 35px !important;
+} 
+
+.slick-dots li button:before{
+    color: white !important;
+    font-size: 15px !important;
+}
+
+.parrafoMed{
+    font-family: 'Archivo', sans-serif;
+    font-weight:500 !important;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #00386d;
+}
+
+h2{
+    font-size: 3.5rem;
+}
+
+#comoEmpezar{
+    background-color:#3db9b9;
+}
+
+#comoEmpezar h2, #cursos h2, #testimonios h2, #contacto h2{
+    font-weight:600;
+    color: #00386d;
+}
+
+#comoEmpezar button, .btn-contacto{
+    background-color:#00386d !important;
+    color: white !important;
+    font-weight: 600;
+    width: 150px;
+    height: 50px;
+    border: 0;
+}
+
+.pasos h3{
+    color: #00386d;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.pasos p{
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.card{
+    height: 430px;
+}
+
+.card-title{
+    font-weight: bold;
+    color: #00386d;
+}
+
+.card-text{
+    font-weight: 600;
+    color: #787878;
+}
+
+#preguntas{
+    background-image: url("../img/fondo-azul.jpg");
+    margin-top: -170px;
+    padding-top: 180px;
+    padding-bottom: 100px;
+    line-height: 26px;
+}
+
+#preguntas div h2{
+    font-weight:600;
+    color: white;
+    font-size: 2.2rem;
+    margin-left: 15px;
+}
+
+#preguntas div h3{
+    color: #3db9b9;
+    font-weight:bold;
+    font-size: 20px;
+}
+
+#preguntas .container{
+    padding-left: 0 !important;
+}
+
+#preguntas .container p, #preguntas .container ul li {
+    color: white;
+    font-size: 16px;
+}
+
+#preguntas .container ul{
+    padding-left: 20px;
+}
+
+#preguntas .container img{
+    width: 45px;
+}
+
+#preguntas .container .col-1{
+    padding-left: 0 !important;
+}
+.gap{
+    gap: 25px;
+}
+
+#testimonios{
+    background-color:#3db9b9;
+    padding-top: 140px;
+    padding-bottom: 170px;
+}
+
+#testimonios img{
+    margin-top: -140px;
+    opacity: 0.4;
+    
+}
+
+#testimonios h2{
+    z-index: 2;  
+}
+
+.testimonio{
+    background-color: white;
+    height: 450px;
+    text-align: center;
+}
+
+.testimonio img{
+    width: 90px;
+    opacity: 1 !important;
+    margin: 40px 0 20px 0 !important;
+}
+
+#testimonios .slick-slider{
+    width:70%;
+    margin-top: -20px;
+}
+.testimonio p{
+    width: 600px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+#testimonios .slick-dots{
+    bottom: -90px !important;
+}
+
+#contacto, footer{
+    background-color: #ededed;
+}
+
+#contacto{
+    padding: 120px 0 ;
+}
+
+#contacto p{
+    font-weight: 600;
+    color: #787878;
+    font-size:1.5rem;
+    margin-bottom: 20px;
+}
+
+form{
+    margin-top: 40px;
+}
+
+form input, form textarea{
+    color: #787878 !important;
+
+}
+.btn-contacto{
+    margin-top: 40px;
+}
+
+footer p{
+    font-weight: 500;
+    color: #787878;
+}
+
+.arrow img{
+    width:60px;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+}
+
+footer nav ul{
+    margin-bottom: 0!important;
+}
+
+footer nav ul li{
+    list-style-type: none;
+    margin-left: 15px;
+}
+footer nav ul li a img{
+    width: 20px;
+}
+
+footer .container{
+    border-top: 1px solid #787878 !important;
+}
