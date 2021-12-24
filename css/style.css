@@ -2,19 +2,21 @@
 
 body{
     font-family: 'Archivo', sans-serif;
+    padding:0;
 }
 
-header nav ul li a{
-    color: #00386d;
+header .navbar-light .navbar-nav .nav-link{
+    color: #00386d !important;
     font-family: 'Archivo', sans-serif;
     font-weight:bold;
     text-transform: uppercase;
-    
+    border-bottom: transparent 2px solid;
 }
 
-header nav ul li a:hover, header nav ul li a:focus{
+header .navbar-light .navbar-nav .nav-link:hover, 
+header .navbar-light .navbar-nav .nav-link:focus{
     color: #3db9b9;
-    border-bottom: #3db9b9 2px solid;
+    border-bottom-color: #3db9b9;
     text-decoration: none;
 }
 header nav ul li{
@@ -22,12 +24,8 @@ header nav ul li{
     
 }
 
-header{
-    height: 80px;
-}
-
-#logo{
-    max-width: 300px;
+header .bg-light { 
+    background: white !important;
 }
 
 .slick-slide,
@@ -42,6 +40,68 @@ header{
 .slick-dots li button:before{
     color: white !important;
     font-size: 15px !important;
+}
+
+.slick-next {
+    z-index: 10;
+    right: 50px;
+}
+
+.slick-prev {
+    z-index: 10;
+    left: 30px;
+}
+
+.slick-next:before {
+    content: "";
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../img/slide-r.png) center center / contain no-repeat;
+}
+
+.slick-prev:before {
+    content: "";
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../img/slide-l.png) center center / contain no-repeat;
+}
+
+.slide-comentarios .slick-next {
+    right: -50px;
+}
+
+.slide-comentarios .slick-prev {
+    left: -80px;
+}
+
+.slide-comentarios .slick-next:before {
+    content: "";
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../img/testimonio-r.png) center center / contain no-repeat;
+}
+
+.slide-comentarios .slick-prev:before {
+    content: "";
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../img/testimonio-l.png) center center / contain no-repeat;
+}
+
+.navbar-brand {
+    max-width: 300px;
 }
 
 .parrafoMed{
@@ -68,19 +128,36 @@ h2{
     color: #00386d;
 }
 
-#comoEmpezar button, .btn-contacto{
+#comoEmpezar a, .btn-contacto{
     background-color:#00386d !important;
     color: white !important;
     font-weight: 600;
     width: 150px;
     height: 50px;
     border: 0;
+    line-height: 42px;
 }
 
 .pasos h3{
     color: #00386d;
     font-weight: bold;
     font-size: 1.3rem;
+    position: relative;
+    display: flex;
+    align-items:center;
+    z-index: 2;
+}
+
+.pasos h3::after {
+    content: attr(data-number);
+    display: block;
+    font-size: 100px;
+    position: absolute;
+    font-weight: 800;
+    left: -10px;
+    color: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+    margin-bottom: 20px;
 }
 
 .pasos p{
@@ -105,7 +182,7 @@ h2{
 
 #preguntas{
     background-image: url("../img/fondo-azul.jpg");
-    margin-top: -170px;
+    margin-top: -210px;
     padding-top: 180px;
     padding-bottom: 100px;
     line-height: 26px;
@@ -181,7 +258,6 @@ h2{
     margin-top: -20px;
 }
 .testimonio p{
-    width: 600px;
     font-weight: 600;
     font-size: 1.2rem;
 }
@@ -211,7 +287,7 @@ form{
 
 form input, form textarea{
     color: #787878 !important;
-
+    font-size: 1.25rem !important;
 }
 .btn-contacto{
     margin-top: 40px;
@@ -243,4 +319,108 @@ footer nav ul li a img{
 
 footer .container{
     border-top: 1px solid #787878 !important;
+}
+
+@media (max-width: 1024px) { 
+    .navbar-brand {
+        max-width:200px;
+    }
+    header .navbar-light .navbar-nav .nav-link {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) { 
+    .navbar-brand {
+        width:70%;
+    }
+
+    .slide-comentarios .slick-next,
+    .slide-comentarios .slick-prev {
+        display: none !important;
+    }
+
+    .hello {
+        height: 80px;
+    }
+
+    #testimonios .slick-slider {
+        width: 90%;
+        margin-top: -10px;
+    }
+
+    .testimonio p {
+        font-size: 0.8rem;
+    }
+
+    #testimonios img {
+        margin-top: 0;
+    }
+
+    #testimonios {
+        padding-top: 60px;
+        padding-bottom: 110px;
+    }
+
+    #comoEmpezar h2, #cursos h2, #testimonios h2, #contacto h2 {
+        font-size: 2.4rem;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    #preguntas div h2{
+        font-size:2rem;
+        text-align: center;
+    }
+
+    #contacto {
+    padding: 60px 0;
+    }
+
+    #contacto h2{
+        margin-bottom: 40px;
+    }
+
+    #preguntas{
+        padding-bottom: 60px;
+    }
+
+    .pasos h3 {
+        padding-left: 50px !important;
+        margin-left: 20px;
+    }
+
+    .pasos h3::after {
+        font-size: 80px;
+        left: 0px;
+        margin-bottom: 10px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    .slick-next {
+        right: 10px;
+    }
+
+    .slick-prev {
+        left: 10px;
+    }
+
+    .slick-next:before {
+        width: 20px;
+        height: 20px;
+    }
+
+    .slick-prev:before {
+        width: 20px;
+        height: 20px;
+    }
+
+    .slick-slider:not(.slide-comentarios) .slick-dots {
+        display: none !important;
+    }
 }
