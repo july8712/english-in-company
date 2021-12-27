@@ -21,7 +21,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid px-0 px-sm-5">
-                <a class="navbar-brand" href="#"><img src="img/Logo.png" alt="English in Company" class="img-fluid" id="logo"></a>
+                <a class="navbar-brand" href="/"><img src="img/Logo.png" alt="English in Company" class="img-fluid" id="logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -108,7 +108,7 @@
                     </article>
                 </div>
                 <div class="d-flex my-5 justify-content-center">
-                    <a href="" class="btn btn-link btn-sm">Test</a>
+                    <a href="html/test.html" class="btn btn-link btn-sm">Test</a>
                 </div>
             </div>
         </section>
@@ -305,23 +305,22 @@
                 </div>
                 <div class="row">
                     <div class="col-12 ">
-                        <form action="">
-                        
+                        <form action="php/sendmail.php" id="contactForm" method="post">
                             <div class="row ">
                                 <div class="col-md-6 d-flex flex-column justify-content-between">
                                     <div class="form-group">
-                                        <input type="text" placeholder="Nombre y apellido*" class="form-control form-control-lg" required>
+                                        <input type="text" placeholder="Nombre y apellido*" name="name" class="form-control form-control-lg" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" placeholder="Mail*" class="form-control form-control-lg" required>
+                                        <input type="email" placeholder="Mail*" name="email" class="form-control form-control-lg" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="phone" placeholder="Celular" class="form-control form-control-lg">
+                                        <input type="phone" placeholder="Celular" name="phone" class="form-control form-control-lg">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <textarea name="" id="" cols="30" rows="7" placeholder="Mensaje*" class="form-control" required></textarea>
+                                        <textarea cols="30" rows="7" name="message" placeholder="Mensaje*" class="form-control" required></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -330,7 +329,6 @@
                             </div>
                         </form>
                     </div>
-                    
                 </div>
             </div>
         </section>
@@ -357,6 +355,7 @@
         integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

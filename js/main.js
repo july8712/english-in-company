@@ -40,4 +40,63 @@ $(document).ready(function(){
       }
     }
   });
+
+  $(function () {
+    $("#contactForm").on("submit", function () {
+      var form = this;
+      var button = $(this).find("button")
+      button.prop('disabled', true);
+
+      if ($(this).valid()) {
+        $.ajax({
+          url: form.action + "?form=contact",
+          method: "POST",
+          data: $(this).serialize(),
+          success: function (r) {
+            if (r === "ok") {
+              $("#contactForm").prepend(
+                '<div class="alert alert-success alert-dismissible fade show" role="alert">' +
+                "<strong>Mensaje enviado</strong>." +
+                '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
+                '<span aria-hidden="true">&times;</span>' +
+                "</button></div>");
+              button.prop('disabled', false);
+              form.reset();
+              setTimeout(function() { $('.alert').alert('close'); }, 4000);
+            } else {
+              $("#contactForm").prepend(
+                '<div class="alert alert-danger alert-dismissible fade show" role="alert">' +
+                "<strong>Hubo un error al enviar el mensaje</strong>." +
+                '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
+                '<span aria-hidden="true">&times;</span>' +
+                "</button></div>");
+              button.prop('disabled', false);
+            }
+          }
+        });
+      } else {
+        button.prop('disabled', false);
+      }
+      return false;
+    })
+
+    $("#contactForm").validate({
+      rules: {
+        name: "required",
+        message: "required",
+        email: {
+          "required": true,
+          "email": true
+        }
+      },
+      messages: {
+        name: "Por favor, ingresá tu nombre.",
+        message: "Por favor, escribí un mensaje.",
+        email: {
+          "required": "Por favor, escribí un email.",
+          "email": "Por favor, escribí un email válido."
+        }
+      }
+    });
+  })
 });

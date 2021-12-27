@@ -1,0 +1,6 @@
+{
+    "name": "mavt/english-in-company",
+    "require": {
+        "phpmailer/phpmailer": "^6.5"
+    }
+}

@@ -5,6 +5,10 @@ body{
     padding:0;
 }
 
+body.bg-gray {
+    background-color: #ededed;
+}
+
 header .navbar-light .navbar-nav .nav-link{
     color: #00386d !important;
     font-family: 'Archivo', sans-serif;
