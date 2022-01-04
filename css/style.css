@@ -15,6 +15,8 @@ header .navbar-light .navbar-nav .nav-link{
     font-weight:bold;
     text-transform: uppercase;
     border-bottom: transparent 2px solid;
+    font-size: 14px;
+    margin-bottom: -5px;
 }
 
 header .navbar-light .navbar-nav .nav-link:hover, 
@@ -32,23 +34,31 @@ header .bg-light {
     background: white !important;
 }
 
-.slick-slide,
-.slick-slide img {
+.slick-slider:not(.slide-comentarios) .slick-slide {
+    height: calc(100vh - 90px);
+}
+.slick-slider:not(.slide-comentarios) .slick-slide img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .slick-dots{
     bottom: 35px !important;
 } 
 
+.slick-dots li {
+    margin: 0 2px;
+}
+
 .slick-dots li button:before{
     color: white !important;
-    font-size: 15px !important;
+    font-size: 10px !important;
 }
 
 .slick-next {
     z-index: 10;
-    right: 50px;
+    right: 40px;
 }
 
 .slick-prev {
@@ -61,8 +71,8 @@ header .bg-light {
     font-size: 0;
     line-height: 0;
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     background: url(../img/slide-r.png) center center / contain no-repeat;
 }
 
@@ -71,8 +81,8 @@ header .bg-light {
     font-size: 0;
     line-height: 0;
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     background: url(../img/slide-l.png) center center / contain no-repeat;
 }
 
@@ -105,12 +115,13 @@ header .bg-light {
 }
 
 .navbar-brand {
-    max-width: 300px;
+    max-width: 260px;
 }
 
 .parrafoMed{
     font-family: 'Archivo', sans-serif;
     font-weight:500 !important;
+    color: #787878;
 }
 
 h1{
@@ -123,13 +134,41 @@ h2{
     font-size: 3.5rem;
 }
 
+#quienSoy {
+    padding-top: 82px;
+    padding-bottom: 114px;
+}
+
 #comoEmpezar{
+    padding-top: 130px;
+    padding-bottom: 130px;
     background-color:#3db9b9;
 }
 
-#comoEmpezar h2, #cursos h2, #testimonios h2, #contacto h2{
+#comoEmpezar h2 {
+    margin-bottom: 50px;
+}
+
+#comoEmpezar .line {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: white;
+    margin-left: 24px;
+    margin-bottom: 20px;
+}
+
+#comoEmpezar h2, #cursos h2, #testimonios h2, #contacto h2, #testimonios h3, .testimonio p.job{
     font-weight:600;
     color: #00386d;
+}
+
+#cursos {
+    margin-top: 130px;
+}
+
+#cursos h2 {
+    margin-bottom: 50px;
 }
 
 #comoEmpezar a, .btn-contacto{
@@ -137,15 +176,16 @@ h2{
     color: white !important;
     font-weight: 600;
     width: 150px;
-    height: 50px;
+    height: 60px;
     border: 0;
-    line-height: 42px;
+    line-height: 52px;
+    font-size: 20px !important;
 }
 
 .pasos h3{
     color: #00386d;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 24px;
     position: relative;
     display: flex;
     align-items:center;
@@ -155,18 +195,16 @@ h2{
 .pasos h3::after {
     content: attr(data-number);
     display: block;
-    font-size: 100px;
+    font-size: 150px;
     position: absolute;
-    font-weight: 800;
     left: -10px;
     color: rgba(255, 255, 255, 0.3);
     z-index: -1;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .pasos p{
     color: white;
-    font-weight: 600;
     font-size: 1rem;
 }
 
@@ -180,15 +218,14 @@ h2{
 }
 
 .card-text{
-    font-weight: 600;
     color: #787878;
 }
 
 #preguntas{
     background-image: url("../img/fondo-azul.jpg");
-    margin-top: -210px;
-    padding-top: 180px;
-    padding-bottom: 100px;
+    margin-top: -160px;
+    padding-top: 220px;
+    padding-bottom: 130px;
     line-height: 26px;
 }
 
@@ -197,6 +234,7 @@ h2{
     color: white;
     font-size: 2.2rem;
     margin-left: 15px;
+    margin-bottom: 50px;
 }
 
 #preguntas div h3{
@@ -231,8 +269,8 @@ h2{
 
 #testimonios{
     background-color:#3db9b9;
-    padding-top: 140px;
-    padding-bottom: 170px;
+    padding-top: 130px;
+    padding-bottom: 200px;
 }
 
 #testimonios img{
@@ -264,6 +302,7 @@ h2{
 .testimonio p{
     font-weight: 600;
     font-size: 1.2rem;
+    color: #787878;
 }
 
 #testimonios .slick-dots{
@@ -275,13 +314,13 @@ h2{
 }
 
 #contacto{
-    padding: 120px 0 ;
+    padding: 130px 0 ;
 }
 
 #contacto p{
     font-weight: 600;
     color: #787878;
-    font-size:1.5rem;
+    font-size:20px;
     margin-bottom: 20px;
 }
 
@@ -291,15 +330,43 @@ form{
 
 form input, form textarea{
     color: #787878 !important;
-    font-size: 1.25rem !important;
+    font-size: 14px !important;
+    border-radius: 0 !important;
 }
+
+form textarea {
+    padding: 24px !important;
+}
+
+form input {
+    height: 60px !important;
+    padding: 0 24px !important;
+}
+
 .btn-contacto{
     margin-top: 40px;
 }
 
+input::-webkit-input-placeholder, 
+textarea::-webkit-input-placeholder { /* Edge */
+    color: #999999 !important;
+}
+
+input:-ms-input-placeholder, 
+textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #999999 !important;
+}
+
+input::placeholder, 
+textarea::placeholder {
+    color: #999999 !important;
+}
+
+
 footer p{
     font-weight: 500;
     color: #787878;
+    font-size: 12px;
 }
 
 .arrow img{
@@ -335,6 +402,11 @@ footer .container{
 }
 
 @media (max-width: 576px) { 
+
+    .slick-slider:not(.slide-comentarios) .slick-slide {
+        height: auto;
+    }
+
     .navbar-brand {
         width:70%;
     }
@@ -358,11 +430,11 @@ footer .container{
     }
 
     #testimonios img {
-        margin-top: 0;
+        margin-top: -70px;
     }
 
     #testimonios {
-        padding-top: 60px;
+        padding-top: 80px;
         padding-bottom: 110px;
     }
 
@@ -389,6 +461,10 @@ footer .container{
 
     #preguntas{
         padding-bottom: 60px;
+    }
+
+    .pasos {
+        margin-bottom: 50px;
     }
 
     .pasos h3 {
