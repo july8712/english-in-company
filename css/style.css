@@ -17,6 +17,8 @@ header .navbar-light .navbar-nav .nav-link{
     border-bottom: transparent 2px solid;
     font-size: 14px;
     margin-bottom: -5px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 header .navbar-light .navbar-nav .nav-link:hover, 
@@ -58,12 +60,14 @@ header .bg-light {
 
 .slick-next {
     z-index: 10;
-    right: 40px;
+    right: 40px;    
+    filter: drop-shadow(-2px 2px 3px rgb(0, 0, 0));
 }
 
 .slick-prev {
     z-index: 10;
     left: 30px;
+    filter: drop-shadow(2px 2px 3px rgb(0, 0, 0));
 }
 
 .slick-next:before {
@@ -88,10 +92,12 @@ header .bg-light {
 
 .slide-comentarios .slick-next {
     right: -50px;
+    filter: none;
 }
 
 .slide-comentarios .slick-prev {
     left: -80px;
+    filter: none;
 }
 
 .slide-comentarios .slick-next:before {
@@ -112,6 +118,19 @@ header .bg-light {
     width: 50px;
     height: 50px;
     background: url(../img/testimonio-l.png) center center / contain no-repeat;
+}
+
+.slick-slide {
+    position: relative;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 15vh;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar-brand {
@@ -163,6 +182,10 @@ h2{
     color: #00386d;
 }
 
+p.job {
+    margin-bottom: 0;
+}
+
 #cursos {
     margin-top: 130px;
 }
@@ -171,7 +194,7 @@ h2{
     margin-bottom: 50px;
 }
 
-#comoEmpezar a, .btn-contacto{
+#comoEmpezar a, .btn-contacto, .buttons a{
     background-color:#00386d !important;
     color: white !important;
     font-weight: 600;
@@ -180,6 +203,18 @@ h2{
     border: 0;
     line-height: 52px;
     font-size: 20px !important;
+}
+#comoEmpezar a:hover, .btn-contacto:hover {
+    background-color: #00203d !important;
+}
+
+.buttons a {
+    background-color: white !important;
+    color: #00386d !important;
+    margin: 0 10px;
+    width: auto;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .pasos h3{
@@ -330,7 +365,7 @@ form{
 
 form input, form textarea{
     color: #787878 !important;
-    font-size: 14px !important;
+    font-size: 16px !important;
     border-radius: 0 !important;
 }
 
@@ -366,7 +401,7 @@ textarea::placeholder {
 footer p{
     font-weight: 500;
     color: #787878;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .arrow img{
@@ -398,13 +433,28 @@ footer .container{
     }
     header .navbar-light .navbar-nav .nav-link {
         font-size: 14px;
+        display: inline-block;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 10px;
+    }
+    header .navbar-light .navbar-nav .nav-item:last-of-type .nav-link {
+        margin-bottom: 0;
     }
 }
 
 @media (max-width: 576px) { 
-
     .slick-slider:not(.slide-comentarios) .slick-slide {
-        height: auto;
+        height: calc(100vh - 75px);
+    }
+    .navbar-light .navbar-toggler {
+        border: 0;
+        color:#00386d;
+    }
+
+    #quienSoy {
+        padding-top: 52px;
+        padding-bottom: 64px;
     }
 
     .navbar-brand {
@@ -426,7 +476,7 @@ footer .container{
     }
 
     .testimonio p {
-        font-size: 0.8rem;
+        font-size: 16px;
     }
 
     #testimonios img {
@@ -435,15 +485,32 @@ footer .container{
 
     #testimonios {
         padding-top: 80px;
-        padding-bottom: 110px;
+        padding-bottom: 90px;
+    }
+
+    #comoEmpezar {
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 
     #comoEmpezar h2, #cursos h2, #testimonios h2, #contacto h2 {
         font-size: 2.4rem;
     }
 
+    #comoEmpezar h2 {
+        margin-bottom: 20px;
+    }
+
+    #cursos {
+        margin-top: 80px;
+    }
+
     .arrow {
         display: none;
+    }
+
+    .card {
+        height: auto;
     }
 
     #preguntas div h2{
@@ -460,7 +527,35 @@ footer .container{
     }
 
     #preguntas{
-        padding-bottom: 60px;
+        padding-bottom: 80px;
+        margin-top: 80px;
+        padding-top: 80px;
+    }
+
+    #preguntas .container img {
+        width: 35px;
+    }
+
+    #testimonios .slick-dots {
+        bottom: -50px !important;
+    }
+
+    .testimonio {
+        height: 520px;
+    }
+
+    .testimonio img {
+        width: 60px;
+        margin: 0px 0 20px 0 !important;
+    }
+
+    #testimonios h3 {
+        font-size: 24px;
+    }
+
+    #contacto p {
+        font-size: 16px;
+        text-align: center;
     }
 
     .pasos {
@@ -469,7 +564,6 @@ footer .container{
 
     .pasos h3 {
         padding-left: 50px !important;
-        margin-left: 20px;
     }
 
     .pasos h3::after {
@@ -502,5 +596,27 @@ footer .container{
 
     .slick-slider:not(.slide-comentarios) .slick-dots {
         display: none !important;
+    }
+
+    footer p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    footer nav ul li a img {
+        width: 30px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        bottom: 10vh;
+    }
+
+    .buttons a {
+        margin-bottom: 10px;
+        width: 60%;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }

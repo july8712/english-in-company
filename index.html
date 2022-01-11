@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +25,7 @@
                 <a class="navbar-brand" href="/"><img src="img/Logo.png" alt="English in Company" class="img-fluid" id="logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <img src="img/menu.png" alt="menu" width="30" height="30">
                 </button>
             
                 <div class="collapse navbar-collapse py-3 py-sm-0" id="navbarSupportedContent">
@@ -53,18 +54,37 @@
         <!-- Carrusel -->
         <section>
             <div class="slick-slider">
-                <div><img src="img/1.png" alt="" class="img-fluid"></div>
-                <div><img src="img/2.png" alt="" class="img-fluid"></div>
-                <div><img src="img/3.png" alt="" class="img-fluid"></div>
-                <div><img src="img/4.png" alt="" class="img-fluid"></div>
-                <div><img src="img/5.png" alt="" class="img-fluid"></div>
+                <div>
+                    <img src="img/1.png" alt="1" class="img-fluid d-none d-md-block">
+                    <img src="img/mobile/1.png" alt="1" class="img-fluid d-md-none d-block">
+                </div>
+                <div>
+                    <img src="img/2.png" alt="2" class="img-fluid d-none d-md-block">
+                    <img src="img/mobile/2.png" alt="2" class="img-fluid d-md-none d-block">
+                </div>
+                <div>
+                    <img src="img/3.png" alt="3" class="img-fluid d-none d-md-block">
+                    <img src="img/mobile/3.png" alt="3" class="img-fluid d-md-none d-block">
+                </div>
+                <div>
+                    <img src="img/4.png" alt="4" class="img-fluid d-none d-md-block">
+                    <img src="img/mobile/4.png" alt="1" class="img-fluid d-md-none d-block">
+                </div>
+                <div>
+                    <img src="img/5.png" alt="5" class="img-fluid d-none d-md-block">
+                    <img src="img/mobile/5.png" alt="5" class="img-fluid d-md-none d-block">
+                    <div class="buttons">
+                        <a href="#contacto" class="btn btn-link btn-sm rounded-0 text-decoration-none shadow-sm">Escribime</a>
+                        <a href="html/test.html" class="btn btn-link btn-sm rounded-0 text-decoration-none shadow-sm">Test de nivelación</a>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- Fin de Carrusel -->
 
         <!-- Quién Soy -->
         <section id="quienSoy" class="container">
-            <div class="row">
+            <div class="row flex-column-reverse flex-md-row">
                 <div class="col-md-6 px-5">
                     <img src="img/hello.png" alt="Hello" class="mb-4 hello">
                     <h1 class="mb-4">Me llamo Cecilia Ricagno: soy traductora y profesora de inglés.</h1>
@@ -73,8 +93,8 @@
                     <p class="parrafoMed">Sé que, a veces, el aprendizaje se hace cuesta arriba. No te preocupes: en equipo, podemos lograrlo. </p>
                     <p class="parrafoMed">HERE WE GO!</p>
                 </div>
-                <div class="col-md-6">
-                    <img src="img/marco.png" alt="Cecilia Ricagno" class="img-fluid" >
+                <div class="col-md-6 mb-5 mb-sm-0">
+                    <img src="img/marco.png" alt="Cecilia Ricagno" class="img-fluid" />
                 </div>
             </div>
         </section>
@@ -90,25 +110,25 @@
                 </div>
                 
                 <div class="row">
-                    <article class="col-md-4 pasos">
+                    <article class="col-md-4 pasos px-5 px-sm-0">
                         <h3 class="mb-5 pl-4" data-number="01">Test de nivelación</h3>
                         <span class="line"></span>
-                        <p class="pl-4 pr-4">Hacé clic en "Test" y realizá el test de nivelación.</p>
+                        <p class="px-md-4">Hacé clic en "Test" y realizá el test de nivelación.</p>
                     </article>
-                    <article class="col-md-4 pasos">
+                    <article class="col-md-4 pasos px-5 px-sm-0">
                         <h3 class="mb-5 pl-4" data-number="02">Entrevista</h3>
                         <span class="line"></span>
-                        <p class="pl-4 pr-4">La entrevista personal me ayuda a terminar de identificar tu nivel y comprender tanto tus necesidades como tus objetivos. Contactame.
+                        <p class="px-md-4">La entrevista personal me ayuda a terminar de identificar tu nivel y comprender tanto tus necesidades como tus objetivos. Contactame.
 </p>
                     </article>
-                    <article class="col-md-4 pasos">
+                    <article class="col-md-4 pasos px-5 px-sm-0">
                         <h3 class="mb-5 pl-4"  data-number="03">Plan de estudios</h3>
                         <span class="line"></span>
-                        <p class="pl-4 pr-4">Cada necesidad es distinta, y lo sé. Ofrezco diferentes modalidades de clase que se adaptan a vos.
+                        <p class="px-md-4">Cada necesidad es distinta, y lo sé. Ofrezco diferentes modalidades de clase que se adaptan a vos.
 </p>
                     </article>
                 </div>
-                <div class="d-flex mt-5 justify-content-center">
+                <div class="d-flex mt-sm-5 justify-content-center">
                     <a href="html/test.html" class="btn btn-link btn-sm rounded-0 text-decoration-none">Test</a>
                 </div>
             </div>
@@ -123,7 +143,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-md-4 mb-3 px-5 px-md-3">
+                <div class="col-md-4 mb-2 px-5 px-md-3">
                     <div class="card rounded-0">
                         <img src="img/Clases-individuales.jpg" class="card-img-top rounded-0" alt="Clases individuales">
                         <div class="card-body">
@@ -132,7 +152,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3 px-5 px-md-3">
+                <div class="col-md-4 mb-2 px-5 px-md-3">
                     <div class="card rounded-0">
                         <img src="img/Grupales.jpg" class="card-img-top rounded-0" alt="Clases grupales">
                         <div class="card-body">
@@ -141,7 +161,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3 px-5 px-md-3">
+                <div class="col-md-4 mb-2 px-5 px-md-3">
                     <div class="card rounded-0">
                         <img src="img/Examenes-internacionales.jpg" class="card-img-top rounded-0" alt="Exámenes internacionales">
                         <div class="card-body">
@@ -163,21 +183,21 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 px-5 px-sm-0">
                         <div class="row">
-                            <div class="col-3 col-md-2 text-right">
+                            <div class="col-2 col-md-2 text-right pr-0">
                                 <img src="img/pregunta.png" alt="pregunta">
                             </div>
-                            <div class="col-9 col-md-10 gap mb-3">
+                            <div class="col-10 col-md-10 gap mb-3">
                                 <h3 class="mb-3">¿Cómo son las clases?</h3>
                                 <p>En las clases utilizo el método "aula invertida" (“Flipped Classroom”), es decir, los temas gramaticales, los ejercicios, los videos y las lecturas se asignan como tarea para que, durante la clase, podamos aclarar dudas y nos enfoquemos en la parte oral (speaking) y auditiva (listening). Esto nos permite aprovechar al máximo el tiempo de cursada.</p>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-3 col-md-2 text-right">
+                            <div class="col-2 col-md-2 text-right pr-0">
                                 <img src="img/pregunta.png" alt="pregunta">
                             </div>
-                            <div class="col-9 col-md-10 gap mb-3">
+                            <div class="col-10 col-md-10 gap mb-3">
                                 <h3 class="mb-3">¿Cuáles son las opciones de clases y cursos?</h3>
                                 <ul>
                                     <li>Individuales: de 8 a 17hs.</li>
@@ -187,21 +207,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 px-5 px-sm-0">
                         <div class="row">
-                            <div class="col-3 col-md-2 text-right">
+                            <div class="col-2 col-md-2 text-right pr-0">
                                 <img src="img/pregunta.png" alt="pregunta">
                             </div>
-                            <div class="col-9 col-md-10 gap mb-3">
+                            <div class="col-10 col-md-10 gap mb-3">
                                 <h3 class="mb-3">¿Cómo se realizan los pagos?</h3>
                                 <p>Los pagos son mensuales y se realizan por adelantado (del 1 al 10 del mes) a través de transferencia bancaria.</p>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-3 col-md-2 text-right">
+                            <div class="col-2 col-md-2 text-right pr-0">
                                 <img src="img/pregunta.png" alt="pregunta">
                             </div>
-                            <div class="col-9 col-md-10 gap mb-3">
+                            <div class="col-10 col-md-10 gap mb-3">
                                 <h3 class="mb-3">¿Cómo es la política de cancelación?</h3>
                                 <p>Las clases individuales se podrán reprogramar si se avisa con 48 hs de anticipación.</p>
                                 <p>Si no fuera posible reprogramar, se descontará del mes siguiente. En caso de enfermedad del docente, la clase se reprogramará y de no ser posible, se descontará del mes siguiente. </p>
@@ -218,7 +238,7 @@
         <section id="testimonios" >
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 d-flex flex-column align-items-center justify-content-center">
+                    <div class="col-md-12 d-flex flex-column align-items-center justify-content-center px-5 px-sm-0">
                         <div class="d-flex flex-column align-items-center justify-content-center">
                             <h2>Testimonios</h2>
                             <img src="img/feedback.png" alt="feedback" class="img-fluid">
@@ -306,12 +326,12 @@
         <!-- Contacto -->
         <section id="contacto" >
             <div class="container">
-                <div class="d-flex flex-column align-items-center justify-content-center">
+                <div class="d-flex flex-column align-items-center justify-content-center px-4 px-sm-0">
                     <h2>Contacto</h2>
                     <p>Para más información, completá el siguiente formulario:</p>
                 </div>
                 <div class="row">
-                    <div class="col-12 ">
+                    <div class="col-12 px-5 px-sm-0">
                         <form action="php/sendmail.php" id="contactForm" method="post">
                             <div class="row ">
                                 <div class="col-md-6 d-flex flex-column justify-content-between">
@@ -343,8 +363,8 @@
     <footer>
         <div class="container py-3">
             <div class="row">
-                <div class="col-8 p-2 d-flex align-items-center"><p class="m-0">Copyright © English in Company 2022</p></div>
-                <nav class="col-4 p-2">
+                <div class="col-md-8 p-2 d-flex align-items-center justify-content-center"><p class="m-0">Copyright © English in Company 2022</p></div>
+                <nav class="col-md-4 p-2">
                     <ul class="m-0 p-0 d-flex justify-content-center justify-content-sm-end">
                         <li class="text-center"><a href="https://www.facebook.com/englishincompany.ar/"><img src="img/Facebook.png" alt="Facebook"></a></li>
                         <li class="text-center"><a href="https://www.instagram.com/english.incompany/?hl=es-la"><img src="img/Instagram.png" alt="Instagram"></a></li>
