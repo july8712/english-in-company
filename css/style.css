@@ -108,6 +108,7 @@ header .bg-light {
     width: 50px;
     height: 50px;
     background: url(../img/testimonio-r.png) center center / contain no-repeat;
+    opacity: 1;
 }
 
 .slide-comentarios .slick-prev:before {
@@ -118,6 +119,11 @@ header .bg-light {
     width: 50px;
     height: 50px;
     background: url(../img/testimonio-l.png) center center / contain no-repeat;
+    opacity: 1;
+}
+.slide-comentarios .slick-prev:hover:before,
+.slide-comentarios .slick-next:hover:before {
+    filter: brightness(0.8) contrast(1.2);
 }
 
 .slick-slide {
@@ -471,7 +477,7 @@ footer .container{
     }
 
     #testimonios .slick-slider {
-        width: 90%;
+        width: 100%;
         margin-top: -10px;
     }
 
@@ -519,7 +525,7 @@ footer .container{
     }
 
     #contacto {
-    padding: 60px 0;
+        padding: 60px 0;
     }
 
     #contacto h2{
@@ -594,10 +600,6 @@ footer .container{
         height: 20px;
     }
 
-    .slick-slider:not(.slide-comentarios) .slick-dots {
-        display: none !important;
-    }
-
     footer p {
         font-size: 16px;
         text-align: center;
@@ -614,8 +616,8 @@ footer .container{
     }
 
     .buttons a {
-        margin-bottom: 10px;
-        width: 60%;
+        margin-bottom: 16px;
+        width: auto;
         padding-left: 20px;
         padding-right: 20px;
     }
